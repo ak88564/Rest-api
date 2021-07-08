@@ -1,17 +1,17 @@
 package com.company.mngment.repository;
 
 
-import com.company.mngment.entity.employeeEntity;
+import com.company.mngment.entity.EmployeeEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface employeeRepository extends CrudRepository<employeeEntity, Long> {
+public interface EmployeeRepository extends CrudRepository<EmployeeEntity, Long> {
 
 
-    Optional<employeeEntity> findById(Long userID);
+    Optional<EmployeeEntity> findById(Long userID);
 
 
 

@@ -1,12 +1,13 @@
 package com.company.mngment.repository;
 
 
-import com.company.mngment.entity.taskallotmentEntity;
+import com.company.mngment.entity.DesignationEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface taskallotmentRepository extends CrudRepository<taskallotmentEntity, Long> {
+public interface DesignationRepository extends CrudRepository<DesignationEntity, Long> {
+
 
 
 }

@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 
-public class taskCreateRequest {
+public class TaskCreateRequest {
 
     private String taskDescription;
 
