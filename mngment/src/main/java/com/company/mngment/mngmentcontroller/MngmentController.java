@@ -4,24 +4,29 @@ import com.company.mngment.entity.EmployeeEntity;
 import com.company.mngment.model.EmployeeCreateRequest;
 import com.company.mngment.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("api/v1/Employee")
 public class MngmentController {
 
     @Autowired
     EmployeeService employeeservice;
 
-    @PostMapping("api/v1/Employee")
-    public ResponseEntity<String> createUser(@RequestBody EmployeeCreateRequest employeeCreateRequest)
+    @PostMapping
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public EmployeeEntity createUser(@RequestBody EmployeeCreateRequest employeeCreateRequest)
     {
         employeeservice.createEmployee(employeeCreateRequest);
-        return ResponseEntity.ok("Employee added");
+        return null;
     }
-    @GetMapping("api/v1/Employee/{employeeId}")
-    public ResponseEntity<EmployeeEntity> getemployeebyId(@PathVariable Long employeeId)
+
+    @GetMapping("/{employeeId}")
+    @ResponseStatus(HttpStatus.OK)
+    public EmployeeEntity getemployeebyId(@PathVariable Long employeeId)
     {
-        return ResponseEntity.ok(employeeservice.getuserbyId(employeeId));
+        return employeeservice.getuserbyId(employeeId);
     }
 }

@@ -22,7 +22,7 @@ public class TaskEntity {
     private Long taskId;
 
 
-    @OneToOne(mappedBy = "task", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "task")
     private TaskAllotmentEntity taskallotment;
 
 

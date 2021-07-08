@@ -13,7 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "taskallotment")
+@Table(name = "task_allotment")
 public class TaskAllotmentEntity {
 
     @Id
@@ -28,8 +28,8 @@ public class TaskAllotmentEntity {
     private String startdate;
     private String enddate;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "task_id")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "task_id", referencedColumnName = "task_id")
     private TaskEntity task;
 
 }
