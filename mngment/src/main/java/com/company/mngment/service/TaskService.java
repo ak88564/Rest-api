@@ -1,9 +1,9 @@
 package com.company.mngment.service;
 
 
-import com.company.mngment.entity.taskEntity;
-import com.company.mngment.model.taskCreateRequest;
-import com.company.mngment.repository.taskRepository;
+import com.company.mngment.entity.TaskEntity;
+import com.company.mngment.model.TaskCreateRequest;
+import com.company.mngment.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,11 +11,11 @@ import org.springframework.stereotype.Service;
 public class TaskService {
 
     @Autowired
-    private taskRepository taskrepository;
+    private TaskRepository taskrepository;
 
 
-    public void createTask(taskCreateRequest request) {
-        taskEntity taskentity=new taskEntity();
+    public void createTask(TaskCreateRequest request) {
+        TaskEntity taskentity=new TaskEntity();
 
         taskentity.setTaskDescription(request.getTaskDescription());
 

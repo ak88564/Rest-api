@@ -14,7 +14,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "taskallotment")
-public class taskallotmentEntity {
+public class TaskallotmentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,7 +30,7 @@ public class taskallotmentEntity {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "task_id")
-    private taskEntity task;
+    private TaskEntity task;
 
 }
 

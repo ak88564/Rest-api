@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 
-public class designationCreateRequest {
+public class DesignationCreateRequest {
 
     private String designatedAs;
 }

@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 
-public class taskallotmentCreateRequest {
+public class TaskallotmentCreateRequest {
 
     private Long taskallotId;
     private Long ranking;

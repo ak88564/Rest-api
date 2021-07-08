@@ -13,7 +13,7 @@ import javax.persistence.*;
     @AllArgsConstructor
     @Entity
     @Table(name="Designation")
-    public class designationEntity
+    public class DesignationEntity
     {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,4 +22,3 @@ import javax.persistence.*;
         private String designatedAs;
 
     }
-//i m a good boy
