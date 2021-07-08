@@ -1,7 +1,7 @@
 package com.company.mngment.service;
 
 
-import com.company.mngment.entity.TaskallotmentEntity;
+import com.company.mngment.entity.TaskAllotmentEntity;
 import com.company.mngment.model.TaskallotmentCreateRequest;
 import com.company.mngment.repository.TaskallotmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ public class TaskallotmentService {
 
     public void createTaskallotment(TaskallotmentCreateRequest request) {
 
-        TaskallotmentEntity taskallotmententity = new TaskallotmentEntity();
+        TaskAllotmentEntity taskallotmententity = new TaskAllotmentEntity();
 
         taskallotmententity.setTaskallotId(request.getTaskallotId());
         taskallotmententity.setRanking(request.getRanking());

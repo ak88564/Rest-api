@@ -7,6 +7,8 @@ import com.company.mngment.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class TaskService {
 
@@ -23,5 +25,11 @@ public class TaskService {
 
 
 
+    }
+
+    public TaskEntity gettaskbyId(Long taskId) {
+
+        Optional<TaskEntity> taskEntityOptional=taskrepository.findById(taskId);
+        return taskEntityOptional.orElseGet(TaskEntity::new);
     }
 }

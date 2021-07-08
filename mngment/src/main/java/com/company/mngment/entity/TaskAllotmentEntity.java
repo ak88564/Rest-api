@@ -14,7 +14,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "taskallotment")
-public class TaskallotmentEntity {
+public class TaskAllotmentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
