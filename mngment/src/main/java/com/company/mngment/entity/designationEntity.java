@@ -22,3 +22,4 @@ import javax.persistence.*;
         private String designatedAs;
 
     }
+//i m a good boy
