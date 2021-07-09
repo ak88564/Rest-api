@@ -4,8 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -30,12 +32,10 @@ public class EmployeeEntity {
     private Integer Salary;
     private String State;
 
-    @ManyToOne(fetch=FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "designationId")
-    private DesignationEntity designationEntity;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "employee")
-    private TaskAllotmentEntity taskAllotment;
+    @OneToMany(targetEntity = TaskAllotmentEntity.class, cascade = CascadeType.ALL)
+    @JoinColumn(name="empid_fk", referencedColumnName = "Id")
+    private List<TaskAllotmentEntity> taskAllotment;
 
 
 }

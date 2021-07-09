@@ -28,13 +28,9 @@ public class TaskAllotmentEntity {
     private String startdate;
     private String enddate;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "taskId")
-    private TaskEntity task;
-
-    @OneToOne(fetch = FetchType.LAZY, optional=false)
-    @JoinColumn(name="employee_id", nullable = false)
-    private EmployeeEntity employeeEntity;
+    //@OneToOne(cascade = CascadeType.ALL)
+    //@JoinColumn(name = "taskId")
+    //private TaskEntity task;
 
 }
 

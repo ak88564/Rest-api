@@ -6,8 +6,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
-    @Getter
+@Getter
     @Setter
     @NoArgsConstructor
     @AllArgsConstructor
@@ -21,5 +22,9 @@ import javax.persistence.*;
         private Long designationId;
 
         private String designatedAs;
+
+        @OneToMany(targetEntity = EmployeeEntity.class, cascade = CascadeType.ALL)
+        @JoinColumn(name="desigid_fk", referencedColumnName = "designationId")
+        private List<EmployeeEntity> employeeId;
 
     }
