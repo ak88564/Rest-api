@@ -13,7 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "taskallotment")
+@Table(name = "task_allotment")
 public class TaskAllotmentEntity {
 
     @Id
@@ -22,14 +22,14 @@ public class TaskAllotmentEntity {
 
    // @OneToOne(mappedBy = "taskallotment", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 
-    private Long ranking;
+    private Long rating;
     private String feedback;
     private String status;
     private String startdate;
     private String enddate;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "task_id")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "taskId")
     private TaskEntity task;
 
 }

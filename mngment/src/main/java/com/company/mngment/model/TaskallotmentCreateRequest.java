@@ -12,7 +12,7 @@ import lombok.*;
 public class TaskallotmentCreateRequest {
 
     private Long taskallotId;
-    private Long ranking;
+    private Long rating;
     private String feedback;
     private String status;
     private String startdate;

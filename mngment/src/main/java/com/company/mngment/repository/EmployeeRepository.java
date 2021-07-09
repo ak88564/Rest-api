@@ -2,6 +2,7 @@ package com.company.mngment.repository;
 
 
 import com.company.mngment.entity.EmployeeEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,8 +13,5 @@ public interface EmployeeRepository extends CrudRepository<EmployeeEntity, Long>
 
 
     Optional<EmployeeEntity> findById(Long userID);
-
-
-
 
 }

@@ -19,7 +19,7 @@ public class TaskallotmentService {
         TaskAllotmentEntity taskallotmententity = new TaskAllotmentEntity();
 
         taskallotmententity.setTaskallotId(request.getTaskallotId());
-        taskallotmententity.setRanking(request.getRanking());
+        taskallotmententity.setRating(request.getRating());
         taskallotmententity.setFeedback(request.getFeedback());
         taskallotmententity.setStatus(request.getStatus());
         taskallotmententity.setStartdate(request.getStartdate());
