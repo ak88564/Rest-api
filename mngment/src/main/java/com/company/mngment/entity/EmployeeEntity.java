@@ -29,6 +29,15 @@ public class EmployeeEntity {
     private String endDate;
     private Integer Salary;
     private String State;
+
+    @ManyToOne(fetch=FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "designationId")
+    private DesignationEntity designationEntity;
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "employee")
+    private TaskAllotmentEntity taskAllotment;
+
+
 }
 
 

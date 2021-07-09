@@ -17,6 +17,7 @@ import javax.persistence.*;
     {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
+        @Column(name = "designationId")
         private Long designationId;
 
         private String designatedAs;

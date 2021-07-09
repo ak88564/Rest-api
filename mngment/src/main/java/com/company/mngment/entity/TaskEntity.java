@@ -23,7 +23,7 @@ public class TaskEntity {
 
 
     @OneToOne(mappedBy = "task")
-    private TaskAllotmentEntity taskallotment;
+    private TaskAllotmentEntity task_allotment;
 
 
     //private Long projectId;
