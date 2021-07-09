@@ -19,23 +19,29 @@ public class EmployeeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(length = 50)
-    private String Name;
+    private String name;
 
-    private String Address;
+    private String address;
     private Integer postalcode;
     private Integer phoneNum;
     private String startDate;
     private String endDate;
-    private Integer Salary;
-    private String State;
+    private Integer salary;
+    private String state;
 
 
     @OneToMany(targetEntity = TaskAllotmentEntity.class, cascade = CascadeType.ALL)
-    @JoinColumn(name="empid_fk", referencedColumnName = "Id")
+    @JoinColumn(name="empid_fk", referencedColumnName = "id")
     private List<TaskAllotmentEntity> taskAllotment;
+
+    //@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    //@JoinColumn(name = "designation_id")
+    //private List<DesignationEntity> designation;
+
+
 
 
 }

@@ -8,7 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.List;
 
-@Getter
+    @Getter
     @Setter
     @NoArgsConstructor
     @AllArgsConstructor
@@ -25,6 +25,9 @@ import java.util.List;
 
         @OneToMany(targetEntity = EmployeeEntity.class, cascade = CascadeType.ALL)
         @JoinColumn(name="desigid_fk", referencedColumnName = "designationId")
-        private List<EmployeeEntity> employeeId;
+        private List<EmployeeEntity> employee;
+
+        //@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "designationEntity")
+        //private List<EmployeeEntity> employeeId;
 
     }

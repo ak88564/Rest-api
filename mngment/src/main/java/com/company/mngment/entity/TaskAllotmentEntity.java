@@ -22,15 +22,15 @@ public class TaskAllotmentEntity {
 
    // @OneToOne(mappedBy = "taskallotment", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 
-    private Long ranking;
+    private Long rating;
     private String feedback;
     private String status;
     private String startdate;
     private String enddate;
 
-    //@OneToOne(cascade = CascadeType.ALL)
-    //@JoinColumn(name = "taskId")
-    //private TaskEntity task;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "taskId")
+    private TaskEntity task;
 
 }
 
