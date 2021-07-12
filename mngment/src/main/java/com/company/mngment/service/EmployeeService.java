@@ -7,6 +7,7 @@ import com.company.mngment.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -39,6 +40,20 @@ public class EmployeeService {
         return employeeEntityOptional.orElseGet(EmployeeEntity::new);
     }
 
+    public List<EmployeeEntity> findAll()
+    {
+        return (List<EmployeeEntity>) employeerepository.findAll();
+    }
+
+    public String deleteEmployee(long empId) {
+        employeerepository.deleteById(empId);
+        return "Employee details deleted "+empId;
+    }
 
 
+    public String deleteEmployees() {
+
+        employeerepository.deleteAll();
+        return "All employees successfully removed from the database";
+    }
 }
