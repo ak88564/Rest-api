@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -18,14 +19,16 @@ public class TaskEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "task_id")
+    @Column(name = "taskId")
     private Long taskId;
 
+    private String taskDescription;
 
-   @OneToOne(mappedBy = "task")
-   private TaskAllotmentEntity task_allotment;
 
+    //@OneToOne(targetEntity = TaskAllotmentEntity.class, cascade = CascadeType.ALL)
+    //@JoinColumn(name="taskid_fk", referencedColumnName = "taskId")
+    //private List<TaskAllotmentEntity> task_allotment;
 
     //private Long projectId;
-    private String taskDescription;
+
 }

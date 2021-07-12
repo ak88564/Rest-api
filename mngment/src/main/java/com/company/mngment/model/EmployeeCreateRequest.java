@@ -12,13 +12,13 @@ import java.util.Date;
 
 public class EmployeeCreateRequest {
 
-private String Name;
-private String Address;
-private Integer postalcode;
+private String name;
+private String address;
+private Integer postalCode;
 private Integer phoneNum;
 private String startDate;
 private String endDate;
-private Integer Salary;
-private String State;
+private Integer salary;
+private String state;
 
 }

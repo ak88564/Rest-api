@@ -24,7 +24,7 @@ public class EmployeeService {
 
         employeentity.setName(request.getName());
         employeentity.setAddress(request.getAddress());
-        employeentity.setPostalcode(request.getPostalcode());
+        employeentity.setPostalcode(request.getPostalCode());
         employeentity.setPhoneNum(request.getPhoneNum());
         employeentity.setStartDate(request.getStartDate());
         employeentity.setEndDate(request.getEndDate());
