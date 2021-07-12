@@ -7,12 +7,14 @@ import com.company.mngment.repository.TaskallotmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class TaskallotmentService {
 
 
     @Autowired
-    private TaskallotmentRepository taskallotmentrepository;
+    TaskallotmentRepository taskallotmentRepository;
 
     public void createTaskallotment(TaskallotmentCreateRequest request) {
 
@@ -25,7 +27,13 @@ public class TaskallotmentService {
         taskallotmententity.setStartdate(request.getStartdate());
         taskallotmententity.setEnddate(request.getEnddate());
 
-        taskallotmentrepository.save(taskallotmententity);
+        taskallotmentRepository.save(taskallotmententity);
 
+    }
+
+    public TaskAllotmentEntity getById(Long taskAllotId) {
+
+        Optional<TaskAllotmentEntity> taskAllotmentEntityOptional=taskallotmentRepository.findById(taskAllotId);
+        return taskAllotmentEntityOptional.orElseGet(TaskAllotmentEntity::new);
     }
 }
