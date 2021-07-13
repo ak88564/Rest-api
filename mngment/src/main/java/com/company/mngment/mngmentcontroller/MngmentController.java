@@ -2,6 +2,7 @@ package com.company.mngment.mngmentcontroller;
 
 import com.company.mngment.entity.EmployeeEntity;
 import com.company.mngment.model.EmployeeCreateRequest;
+import com.company.mngment.model.UpdateCreateRequest;
 import com.company.mngment.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -48,5 +49,10 @@ public class MngmentController {
         return "All employee details successfully deleted";
     }
 
+    @PutMapping("/api/v1/employee/{userId}")
+    public EmployeeEntity updateEmployees(@RequestBody UpdateCreateRequest updateCreateRequest, @PathVariable Long userId){
+
+        return employeeservice.updateEmployee(updateCreateRequest,userId);
+    }
 
 }
