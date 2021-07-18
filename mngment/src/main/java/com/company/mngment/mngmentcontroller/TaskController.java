@@ -14,7 +14,7 @@ public class TaskController {
     @Autowired
     TaskService taskservice;
 
-    @PostMapping("api/v1/Task")
+    @PostMapping("api/v1/task")
     public ResponseEntity<String> createTask(@RequestBody TaskCreateRequest taskcreaterequest)
     {
         taskservice.createTask(taskcreaterequest);

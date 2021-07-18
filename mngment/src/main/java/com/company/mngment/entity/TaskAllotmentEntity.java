@@ -28,9 +28,9 @@ public class TaskAllotmentEntity {
     private String startdate;
     private String enddate;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "taskId")
-    private TaskEntity task;
+    //@OneToOne(cascade = CascadeType.ALL)
+    //@JoinColumn(name = "taskId")
+    //private TaskEntity task;
 
 }
 

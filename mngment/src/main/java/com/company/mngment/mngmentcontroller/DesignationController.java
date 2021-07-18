@@ -14,7 +14,7 @@ public class DesignationController {
     @Autowired
     DesignationService designationservice;
 
-    @PostMapping("api/v1/Designation")
+    @PostMapping("api/v1/designation")
     public ResponseEntity<String> createDesignation(@RequestBody DesignationCreateRequest designationcreaterequest)
     {
         designationservice.createDesignation(designationcreaterequest);
